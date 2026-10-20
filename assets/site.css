@@ -404,7 +404,8 @@ td.low, .low { color: var(--low); }
 .filter { border: 0; border-radius: 999px; padding: 12px 20px; background: var(--tile-2); font-weight: 500; cursor: pointer; transition: background-color .2s, transform .2s var(--ease); }
 .filter:hover { transform: translateY(-2px); }
 .filter[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
-.index-list { margin-top: calc(var(--gap-sec) * .5); }
+.index-list { margin-top: calc(var(--gap-sec) * .5); padding-inline: var(--m) !important; }
+.index-list > * { max-width: none; }
 .index-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .index-tile { display: grid; gap: 14px; align-content: start; padding: 12px 12px 26px; background: var(--sheet); border-radius: var(--r-sheet); text-decoration: none; transition: transform .35s var(--ease); }
 .index-tile:nth-child(3n + 1) { grid-column: span 2; grid-template-columns: 1.4fr 1fr; align-items: center; padding-bottom: 12px; }
