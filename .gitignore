@@ -1,4 +1,13 @@
+# Capturas y archivos de trabajo de las revisiones de diseño
 .taste-skill/
+
+# Dependencias (el sitio no tiene, por si se agregan)
 node_modules/
+
+# Editores y sistema
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
+desktop.ini
+*.log
