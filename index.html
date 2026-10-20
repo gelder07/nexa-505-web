@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexa505 | Sistemas, web y automatización para pymes</title>
+<meta name="description" content="Sistemas de inventario, páginas web, automatizaciones, apps e IA a la medida de tu pyme, con un solo responsable. Desde Nicaragua, 6 años de experiencia.">
+<meta property="og:title" content="Nexa505 | Sistemas, web y automatización para pymes">
+<meta property="og:description" content="Sistemas de inventario, páginas web, automatizaciones, apps e IA a la medida de tu pyme, con un solo responsable. Desde Nicaragua, 6 años de experiencia.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_NI">
+<!-- PENDIENTE: cuando haya dominio, poner la dirección completa (https://dominio/assets/og.png); WhatsApp no lee rutas relativas. -->
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#efeee9">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="top">
+  <a class="mark" href="index.html" aria-label="Nexa505, inicio">Nexa505</a>
+  <nav class="nav" aria-label="Principal">
+    <a class="link" href="index.html#servicios">Servicios</a>
+    <a class="link" href="casos/index.html">Casos</a>
+    <a class="link" href="index.html#precios">Precios</a>
+    <a class="link" href="index.html#preguntas">Preguntas</a>
+  </nav>
+  <a class="button button-sm top-cta" href="https://wa.me/50581867161?text=Hola%2C%20vi%20Nexa505%20y%20quiero%20contarles%20lo%20que%20necesita%20mi%20negocio." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+  <details class="menu">
+    <summary>Menú</summary>
+    <nav aria-label="Principal en celular">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="casos/index.html">Casos</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#preguntas">Preguntas</a>
+      <a href="https://wa.me/50581867161?text=Hola%2C%20vi%20Nexa505%20y%20quiero%20contarles%20lo%20que%20necesita%20mi%20negocio." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </nav>
+  </details>
+</header>
+<main id="contenido">
+
+<section class="hero sheet" aria-labelledby="h1">
+  <div class="hero-text">
+    <h1 id="h1" data-rise>Tu negocio, en un solo lugar</h1>
+    <p class="hero-sub" data-rise style="--i:1">Sistemas de inventario, páginas web, apps y automatizaciones para pymes. Una sola persona te atiende de principio a fin.</p>
+    <div class="hero-actions" data-rise style="--i:2">
+      <a class="button" href="https://wa.me/50581867161?text=Hola%2C%20vi%20Nexa505%20y%20quiero%20contarles%20lo%20que%20necesita%20mi%20negocio." target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      <a class="button button-soft" href="casos/index.html">Ver casos</a>
+    </div>
+  </div>
+  <div class="demo" data-rise style="--i:3">
+    <div class="win win-demo" data-ui>
+      <div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span><span class="win-tag">Demo en vivo</span></div>
+      <div class="demo-grid">
+        <ul class="demo-side" aria-label="Menú de la demo">
+          <li class="on">Productos <b>1,284</b></li><li>Entradas <b>38</b></li><li>Salidas <b>211</b></li><li>Bodegas <b>3</b></li><li>Reportes</li>
+        </ul>
+        <div class="demo-main">
+          <label class="demo-search"><span class="sr">Buscar un producto</span>
+            <input id="inv-q" type="search" placeholder="Escribe un producto: cemento, varilla, pintura…" autocomplete="off" spellcheck="false">
+          </label>
+          <p class="demo-count" aria-live="polite"><span id="inv-n">14 productos</span> · existencias en tiempo real</p>
+          <p class="demo-empty" hidden>Ese producto no está en la demo. En tu sistema estarían todos los tuyos.</p>
+          <div class="demo-table"><table>
+            <thead><tr><th>Producto</th><th>Existencia</th><th>Ubicación</th><th>Precio</th></tr></thead>
+            <tbody id="inv-rows"><tr data-k="cemento gris 42.5 kg"><td>Cemento gris 42.5 kg</td><td class="n">340 bolsas</td><td><span class="loc">Bodega 1 · Pasillo B · Estante 2</span></td><td class="n">C$ 390</td></tr><tr data-k="cemento blanco 20 kg"><td>Cemento blanco 20 kg</td><td class="n">46 bolsas</td><td><span class="loc">Bodega 1 · Pasillo B · Estante 4</span></td><td class="n">C$ 610</td></tr><tr data-k="mortero premezclado 40 kg"><td>Mortero premezclado 40 kg</td><td class="n low">8 bolsas</td><td><span class="loc">Bodega 2 · Pasillo A · Estante 1</span></td><td class="n">C$ 285</td></tr><tr data-k="pegamento para ceramica 20 kg"><td>Pegamento para cerámica 20 kg</td><td class="n">122 bolsas</td><td><span class="loc">Bodega 2 · Pasillo C · Estante 3</span></td><td class="n">C$ 330</td></tr><tr data-k="varilla corrugada 3/8 × 6 m"><td>Varilla corrugada 3/8 × 6 m</td><td class="n">915 unid.</td><td><span class="loc">Patio · Rack 5</span></td><td class="n">C$ 168</td></tr><tr data-k="varilla corrugada 1/2 × 6 m"><td>Varilla corrugada 1/2 × 6 m</td><td class="n">430 unid.</td><td><span class="loc">Patio · Rack 6</span></td><td class="n">C$ 298</td></tr><tr data-k="bloque de concreto 15 cm"><td>Bloque de concreto 15 cm</td><td class="n">2,400 unid.</td><td><span class="loc">Patio · Zona A</span></td><td class="n">C$ 32</td></tr><tr data-k="arena de rio"><td>Arena de río</td><td class="n">18 m³</td><td><span class="loc">Patio · Zona C</span></td><td class="n">C$ 950</td></tr><tr data-k="lamina de zinc cal. 26 × 12 pies"><td>Lámina de zinc cal. 26 × 12 pies</td><td class="n">260 unid.</td><td><span class="loc">Bodega 3 · Pasillo A · Estante 1</span></td><td class="n">C$ 520</td></tr><tr data-k="clavo de 3 pulgadas"><td>Clavo de 3 pulgadas</td><td class="n">96 lb</td><td><span class="loc">Bodega 1 · Pasillo D · Gaveta 7</span></td><td class="n">C$ 45</td></tr><tr data-k="tubo pvc 1/2 pulgada × 6 m"><td>Tubo PVC 1/2 pulgada × 6 m</td><td class="n low">7 unid.</td><td><span class="loc">Bodega 3 · Pasillo B · Estante 2</span></td><td class="n">C$ 115</td></tr><tr data-k="pintura de aceite blanca"><td>Pintura de aceite blanca</td><td class="n">64 galones</td><td><span class="loc">Bodega 2 · Pasillo D · Estante 1</span></td><td class="n">C$ 780</td></tr><tr data-k="tabla de pino 1 × 12 × 12 pies"><td>Tabla de pino 1 × 12 × 12 pies</td><td class="n">150 unid.</td><td><span class="loc">Bodega 3 · Pasillo C · Estante 4</span></td><td class="n">C$ 410</td></tr><tr data-k="alambre de amarre"><td>Alambre de amarre</td><td class="n">210 lb</td><td><span class="loc">Bodega 1 · Pasillo D · Gaveta 2</span></td><td class="n">C$ 52</td></tr></tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mess sec" aria-labelledby="h-mess">
+  <div class="mess-box">
+  <div class="mess-cloud" aria-hidden="true">
+    <span class="chip c0" style="--n:0">Excel de inventario</span>
+    <span class="chip c1" style="--n:1">Cuaderno de ventas</span>
+    <span class="chip c2" style="--n:2">Grupo de WhatsApp</span>
+    <span class="chip c3" style="--n:3">Fotos de facturas</span>
+    <span class="chip c4" style="--n:4">La memoria del encargado</span>
+    <span class="chip c5" style="--n:5">Notas en el celular</span>
+    <span class="chip c6" style="--n:6">Pedidos por correo</span>
+  </div>
+  <div class="mess-text">
+    <h2 id="h-mess" class="head" data-reveal>Tu negocio está regado por todos lados</h2>
+    <p class="lead" data-reveal style="--i:1">Las existencias en un Excel, los pedidos en WhatsApp, las facturas en fotos y el resto en la memoria del encargado. Cuando alguien pregunta, nadie sabe con certeza.</p>
+  </div>
+  </div>
+</section>
+
+<section class="one sheet sec" aria-labelledby="h-one">
+  <div class="one-head">
+    <h2 id="h-one" class="head" data-reveal>Ahora, en un solo lugar</h2>
+    <p class="lead" data-reveal style="--i:1">¿Cuál de estas frases te suena? Elige una y te dejamos el mensaje listo.</p>
+  </div>
+  <div class="one-body">
+    <div class="phrases" role="group" aria-label="Frases frecuentes" data-reveal>
+      <button class="phrase" aria-pressed="true" data-msg="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio. Lo que más nos pesa hoy: &quot;No sabemos cuánto stock tenemos.&quot;" data-srv="Sistema de inventario" data-det="Existencias al día, por producto y por bodega." data-pr="desde $950">No sabemos cuánto stock tenemos.</button>
+      <button class="phrase" aria-pressed="false" data-msg="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio. Lo que más nos pesa hoy: &quot;Cuando un cliente pregunta, hay que ir a contar de nuevo.&quot;" data-srv="Sistema de inventario" data-det="Buscas el producto y ves cuántos hay y en qué estante están." data-pr="desde $950">Cuando un cliente pregunta, hay que ir a contar de nuevo.</button>
+      <button class="phrase" aria-pressed="false" data-msg="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio. Lo que más nos pesa hoy: &quot;Todo lo llevamos en Excel.&quot;" data-srv="Sistema de inventario" data-det="Tus hojas pasan a un sistema que todo el equipo usa al mismo tiempo." data-pr="desde $950">Todo lo llevamos en Excel.</button>
+      <button class="phrase" aria-pressed="false" data-msg="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio. Lo que más nos pesa hoy: &quot;Pasamos horas haciendo lo mismo a mano.&quot;" data-srv="Automatizaciones" data-det="Correos, reportes y tareas repetitivas que se hacen solas." data-pr="desde $350">Pasamos horas haciendo lo mismo a mano.</button>
+      <button class="phrase" aria-pressed="false" data-msg="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio. Lo que más nos pesa hoy: &quot;Nuestra web está vieja y no podemos cambiarla.&quot;" data-srv="Web autoadministrable" data-det="Cambias textos, precios y fotos tú mismo, sin esperar a un técnico." data-pr="$650 a $750">Nuestra web está vieja y no podemos cambiarla.</button>
+    </div>
+    <div class="answer" data-reveal style="--i:1">
+      <p class="answer-k">Lo arregla</p>
+      <p class="answer-srv"><strong id="ans-srv">Sistema de inventario</strong> <span id="ans-pr" class="nums">desde $950</span></p>
+      <p id="ans-det">Existencias al día, por producto y por bodega.</p>
+      <p class="bubble" id="ans-msg">Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio. Lo que más nos pesa hoy: &quot;No sabemos cuánto stock tenemos.&quot;</p>
+      <a class="button" id="ans-go" href="https://wa.me/50581867161?text=Hola%2C%20vi%20Nexa505%20y%20quiero%20contarles%20lo%20que%20necesita%20mi%20negocio.%20Lo%20que%20m%C3%A1s%20nos%20pesa%20hoy%3A%20%22No%20sabemos%20cu%C3%A1nto%20stock%20tenemos.%22" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="srv sec" id="servicios" aria-labelledby="h-serv">
+  <div class="srv-head">
+    <h2 id="h-serv" class="head" data-reveal>Lo que hacemos</h2>
+    <div class="srv-ctrl" data-reveal style="--i:1">
+      <button class="round" data-dir="-1" aria-label="Servicio anterior">←</button>
+      <button class="round" data-dir="1" aria-label="Servicio siguiente">→</button>
+    </div>
+  </div>
+  <ul class="deck" aria-label="Servicios">
+    <li class="card k-lima" style="--rot:-3deg">
+      <div class="card-pic" data-ui><div class="d-search">cemento</div><div class="d-row"><span>Cemento gris 42.5 kg</span><b>340</b></div><div class="d-row"><span>Cemento blanco 20 kg</span><b>46</b></div><span class="loc">Bodega 1 · Pasillo B · Estante 2</span></div>
+      <h3 class="card-name">Sistema de inventario</h3>
+      <p>Existencias y ubicación de cada producto, al día.</p>
+      <p class="card-foot"><span class="nums">desde $950</span><a class="srv-go" href="casos/distribuidora-materiales-construccion/index.html">Ver el caso</a></p>
+    </li>
+    <li class="card k-cielo" style="--rot:2deg">
+      <div class="card-pic" data-ui><div class="d-browser"><div class="d-bar">ferreteriaelpilar.com</div><div class="d-page"><strong>Materiales para tu obra</strong><span>Entregas en Managua el mismo día</span><div class="d-prods"><span>Cemento<b>C$ 390</b></span><span>Zinc<b>C$ 520</b></span><span>Pintura<b>C$ 780</b></span></div></div></div></div>
+      <h3 class="card-name">Web autoadministrable</h3>
+      <p>Cambias textos, precios y fotos tú mismo.</p>
+      <p class="card-foot"><span class="nums">$650 a $750</span><a class="srv-go" href="casos/cargo-trans-rediseno-web/index.html">Ver el caso</a></p>
+    </li>
+    <li class="card k-arena" style="--rot:-1.5deg">
+      <div class="card-pic" data-ui><div class="d-phone"><strong>Pintura a domicilio</strong><span>Cotiza tu casa en un minuto</span><span class="d-btn">Pedir por WhatsApp</span></div></div>
+      <h3 class="card-name">Landing page</h3>
+      <p>Una página enfocada en que te escriban o te compren.</p>
+      <p class="card-foot"><span class="nums">desde $350</span><a class="srv-go" href="https://wa.me/50581867161?text=Hola%2C%20me%20interesa%3A%20Landing%20page.%20%C2%BFPodemos%20conversar%3F" target="_blank" rel="noopener">Preguntar por WhatsApp</a></p>
+    </li>
+    <li class="card k-menta" style="--rot:2.5deg">
+      <div class="card-pic" data-ui><div class="d-flow"><span>Venta registrada</span><i aria-hidden="true">↓</i><span>Factura enviada por correo</span><i aria-hidden="true">↓</i><span class="on">Reporte de ventas cada viernes</span></div></div>
+      <h3 class="card-name">Automatizaciones</h3>
+      <p>Correos, reportes y tareas que se hacen solas.</p>
+      <p class="card-foot"><span class="nums">desde $350</span><a class="srv-go" href="https://wa.me/50581867161?text=Hola%2C%20me%20interesa%3A%20Automatizaciones.%20%C2%BFPodemos%20conversar%3F" target="_blank" rel="noopener">Preguntar por WhatsApp</a></p>
+    </li>
+    <li class="card k-coral" style="--rot:-2deg">
+      <div class="card-pic" data-ui><div class="d-phone"><strong>Pedidos de hoy</strong><div class="d-row"><span>Óptica Morales</span><b>3</b></div><div class="d-row"><span>Bodega Norte</span><b>7</b></div><div class="d-row"><span>Ruta Masaya</span><b>12</b></div></div></div>
+      <h3 class="card-name">App móvil</h3>
+      <p>Pensada para cómo trabaja tu equipo.</p>
+      <p class="card-foot"><span class="nums">desde $750</span><a class="srv-go" href="casos/contollo-app-espacios-3d/index.html">Ver el caso</a></p>
+    </li>
+    <li class="card k-tinta" style="--rot:1.5deg">
+      <div class="card-pic" data-ui><div class="d-chat"><p class="q">Resume el capítulo de insuficiencia cardiaca</p><p class="a">Listo: resumen de 1 página y presentación de 12 diapositivas, con 3 fuentes.</p></div></div>
+      <h3 class="card-name">Inteligencia artificial</h3>
+      <p>Asistentes que buscan, resumen y arman documentos.</p>
+      <p class="card-foot"><span class="nums">Según alcance</span><a class="srv-go" href="casos/plataforma-ia-estudiantes-medicina/index.html">Ver el caso</a></p>
+    </li>
+    <li class="card k-amarillo" style="--rot:-2.5deg">
+      <div class="card-pic" data-ui><div class="d-check"><span>Respaldo diario<b>2:00 a. m.</b></span><span>Actualizaciones<b>Al día</b></span><span>Cambio pedido: precio del cemento<b>Hecho</b></span></div></div>
+      <h3 class="card-name">Mantenimiento mensual</h3>
+      <p>Soporte, respaldos y mejoras cada mes.</p>
+      <p class="card-foot"><span class="nums">Según alcance</span><a class="srv-go" href="https://wa.me/50581867161?text=Hola%2C%20me%20interesa%3A%20Mantenimiento%20mensual.%20%C2%BFPodemos%20conversar%3F" target="_blank" rel="noopener">Preguntar por WhatsApp</a></p>
+    </li>
+  </ul>
+</section>
+
+<section class="steps sheet sheet-dark sec" aria-labelledby="h-steps">
+  <h2 id="h-steps" class="head steps-h" data-reveal>Tu inventario, paso a paso</h2>
+  <div class="steps-grid">
+    <ol class="steps-list">
+      <li class="step" data-step="0">
+        <h3>Buscas un producto</h3>
+        <p>Escribes las primeras letras y el sistema te sugiere el producto, aunque no recuerdes el nombre exacto.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-search"><span class="s-input">cem<span class="caret"></span></span>
+    <ul class="s-sug"><li class="on">Cemento gris 42.5 kg</li><li>Cemento blanco 20 kg</li><li>Mortero premezclado 40 kg</li></ul></div></div></div></div>
+      </li>
+      <li class="step" data-step="1">
+        <h3>Ves cuánto hay y dónde está</h3>
+        <p>Existencias, precio y el estante exacto. Ya nadie tiene que ir a la bodega a contar.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-detail"><p class="s-title">Cemento gris 42.5 kg</p>
+    <p class="s-big">340 <span>bolsas</span></p>
+    <p class="loc loc-big">Bodega 1 · Pasillo B · Estante 2</p>
+    <dl class="s-facts"><div><dt>Precio</dt><dd>C$ 390</dd></div><div><dt>Vendidas este mes</dt><dd>512 bolsas</dd></div><div><dt>Última entrada</dt><dd>15 de octubre</dd></div></dl></div></div></div></div>
+      </li>
+      <li class="step" data-step="2">
+        <h3>Registras una entrada</h3>
+        <p>Llega el camión, anotas la cantidad y el número se actualiza para todo el equipo al mismo tiempo.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-form"><p class="s-title">Nueva entrada</p>
+    <div class="s-field"><span>Producto</span><b>Cemento gris 42.5 kg</b></div>
+    <div class="s-field"><span>Cantidad</span><b>+ 120 bolsas</b></div>
+    <div class="s-field"><span>Proveedor</span><b>Cementera del Norte</b></div>
+    <p class="s-toast">Entrada guardada: de 340 a 460 bolsas</p></div></div></div></div>
+      </li>
+      <li class="step" data-step="3">
+        <h3>Ves el reporte del día</h3>
+        <p>Qué se vendió, cuánto entró y qué hay que reponer antes de que se acabe.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-report"><p class="s-title">Ventas de hoy <b>C$ 55,720</b></p>
+    <ul class="s-bars"><li><span>Cemento gris 42.5 kg</span><i style="--w:100.0%"></i><b>C$ 24,960</b></li><li><span>Varilla corrugada 3/8</span><i style="--w:53.8%"></i><b>C$ 13,440</b></li><li><span>Lámina de zinc</span><i style="--w:31.3%"></i><b>C$ 7,800</b></li><li><span>Bloque de concreto 15 cm</span><i style="--w:25.6%"></i><b>C$ 6,400</b></li><li><span>Pintura de aceite blanca</span><i style="--w:12.5%"></i><b>C$ 3,120</b></li></ul>
+    <p class="s-note">Por reponer: Mortero premezclado (8 bolsas) y Tubo PVC (7 unid.)</p></div></div></div></div>
+      </li>
+    </ol>
+    <div class="steps-stage" aria-hidden="true">
+      <div class="steps-frame"><div class="stage-screen is-on" data-screen="0"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-search"><span class="s-input">cem<span class="caret"></span></span>
+    <ul class="s-sug"><li class="on">Cemento gris 42.5 kg</li><li>Cemento blanco 20 kg</li><li>Mortero premezclado 40 kg</li></ul></div></div></div></div><div class="stage-screen" data-screen="1"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-detail"><p class="s-title">Cemento gris 42.5 kg</p>
+    <p class="s-big">340 <span>bolsas</span></p>
+    <p class="loc loc-big">Bodega 1 · Pasillo B · Estante 2</p>
+    <dl class="s-facts"><div><dt>Precio</dt><dd>C$ 390</dd></div><div><dt>Vendidas este mes</dt><dd>512 bolsas</dd></div><div><dt>Última entrada</dt><dd>15 de octubre</dd></div></dl></div></div></div></div><div class="stage-screen" data-screen="2"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-form"><p class="s-title">Nueva entrada</p>
+    <div class="s-field"><span>Producto</span><b>Cemento gris 42.5 kg</b></div>
+    <div class="s-field"><span>Cantidad</span><b>+ 120 bolsas</b></div>
+    <div class="s-field"><span>Proveedor</span><b>Cementera del Norte</b></div>
+    <p class="s-toast">Entrada guardada: de 340 a 460 bolsas</p></div></div></div></div><div class="stage-screen" data-screen="3"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-report"><p class="s-title">Ventas de hoy <b>C$ 55,720</b></p>
+    <ul class="s-bars"><li><span>Cemento gris 42.5 kg</span><i style="--w:100.0%"></i><b>C$ 24,960</b></li><li><span>Varilla corrugada 3/8</span><i style="--w:53.8%"></i><b>C$ 13,440</b></li><li><span>Lámina de zinc</span><i style="--w:31.3%"></i><b>C$ 7,800</b></li><li><span>Bloque de concreto 15 cm</span><i style="--w:25.6%"></i><b>C$ 6,400</b></li><li><span>Pintura de aceite blanca</span><i style="--w:12.5%"></i><b>C$ 3,120</b></li></ul>
+    <p class="s-note">Por reponer: Mortero premezclado (8 bolsas) y Tubo PVC (7 unid.)</p></div></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="apps sec" aria-labelledby="h-apps">
+  <h2 id="h-apps" class="sr">Apps móviles</h2>
+  <article class="app-row">
+    <div class="app-panel" data-reveal>
+      <div class="phone" data-ui><div class="phone-in contollo">
+        <p class="ph-h">Sala principal<span>Espacio escaneado · 4.2 × 3.6 m</span></p>
+        <p class="ph-tabs"><span>2D</span><span class="on">3D</span><span>Decorar</span></p>
+        <svg class="room" viewBox="0 -20 340 300" role="img" aria-label="Sala en 3D con sofá, mesa y planta">
+          <polygon points="170,110 320,195 170,280 20,195" fill="#e4e3dc"/>
+          <polygon points="20,195 20,75 170,-10 170,110" fill="#d2d1c9"/>
+          <polygon points="170,110 170,-10 320,75 320,195" fill="#bebdb4"/>
+          <polygon points="220,52 270,80 270,140 220,112" fill="#f4f4ef"/>
+          <g class="drop d1"><polygon points="60,200 60,172 140,127 140,155" fill="#7fbf4f"/><polygon points="60,200 140,155 190,183 110,228" fill="#6aa83e"/><polygon points="60,200 110,228 110,244 60,216" fill="#4f8a2b"/><polygon points="110,228 190,183 190,199 110,244" fill="#467c26"/></g>
+          <g class="drop d2"><polygon points="200,220 240,197 270,214 230,237" fill="#a7835d"/><polygon points="230,237 270,214 270,226 230,249" fill="#866645"/><polygon points="200,220 230,237 230,249 200,232" fill="#6e5236"/></g>
+          <g class="drop d3"><polygon points="250,150 268,160 268,200 250,190" fill="#55524a"/><circle cx="259" cy="140" r="16" fill="#3f6b33"/></g>
+        </svg>
+        <p class="ph-cat"><span>Sofá 3 plazas</span><span>Mesa de centro</span><span>Planta</span></p>
+      </div></div>
+    </div>
+    <div class="app-text">
+      <h3 class="head" data-reveal>Escanea la sala y decórala en 3D</h3>
+      <p class="lead" data-reveal style="--i:1">Contollo convierte un espacio real en un modelo 2D y 3D en tiempo real, y muestra cómo quedaría con muebles de catálogos reales antes de comprar.</p>
+      <a class="link-plain" href="casos/contollo-app-espacios-3d/index.html" data-reveal style="--i:2">Ver el caso de Contollo</a>
+    </div>
+  </article>
+  <article class="app-row app-row-flip">
+    <div class="app-panel app-panel-red" data-reveal>
+      <div class="phone" data-ui><div class="phone-in phone-scroll"><img class="cover" src="assets/img/wellpro-movil.jpg" width="390" height="844" alt="Sitio de Wellpro en un celular: catálogo de equipos médicos para el hogar" loading="lazy" decoding="async"></div></div>
+    </div>
+    <div class="app-text">
+      <h3 class="head" data-reveal>Se compra desde el celular</h3>
+      <p class="lead" data-reveal style="--i:1">Wellpro vende equipos médicos para el hogar. Su catálogo dinámico se lee y se navega igual de fácil en el teléfono que en la computadora.</p>
+      <a class="link-plain" href="casos/wellpro-equipos-medicos-hogar/index.html" data-reveal style="--i:2">Ver el caso de Wellpro</a>
+    </div>
+  </article>
+</section>
+
+<section class="work sheet sec" id="casos" aria-labelledby="h-casos">
+  <div class="work-head">
+    <h2 id="h-casos" class="head" data-reveal>Lo último que entregamos</h2>
+    <a class="link-plain" href="casos/index.html" data-reveal style="--i:1">Ver todos los casos</a>
+  </div>
+  <div class="work-grid">
+    <a class="wk wk-big" href="casos/cargo-trans-rediseno-web/index.html" data-reveal style="--i:0">
+      <span class="wk-pic"><img class="cover" src="assets/img/cargotrans-escritorio.jpg" width="1200" height="750" alt="Página de inicio del sitio de Cargo Trans con su flota de camiones y cifras de la empresa" style="object-position:top" loading="lazy" decoding="async"></span>
+      <strong>Cargo Trans: rediseño web</strong>
+      <span class="wk-meta"><span>Logística</span><span>Web</span></span>
+      <span class="wk-line">Presencia digital renovada para una empresa de logística</span>
+    </a>
+    <a class="wk" href="casos/wellpro-equipos-medicos-hogar/index.html" data-reveal style="--i:1">
+      <span class="wk-pic"><img class="cover" src="assets/img/wellpro-escritorio.jpg" width="1200" height="750" alt="Página de inicio del sitio de Wellpro con su mensaje de bienvenida en fondo rojo" style="object-position:top" loading="lazy" decoding="async"></span>
+      <strong>Wellpro: equipos médicos para el hogar</strong>
+      <span class="wk-meta"><span>Equipos médicos para el hogar</span><span>Web</span></span>
+      <span class="wk-line">Catálogo dinámico de equipos médicos para el hogar</span>
+    </a>
+    <a class="wk" href="casos/plataforma-ia-estudiantes-medicina/index.html" data-reveal style="--i:2">
+      <span class="wk-pic"><img class="cover" src="assets/img/ui-ia.png" width="1200" height="800" alt="Pantalla de un asistente médico con una respuesta resumida, sus fuentes y una presentación generada" style="object-position:top" loading="lazy" decoding="async"></span>
+      <strong>Plataforma de IA para medicina</strong>
+      <span class="wk-meta"><span>Educación médica</span><span>Inteligencia artificial</span></span>
+      <span class="wk-line">Respuestas de fuentes confiables y presentaciones listas</span>
+    </a>
+    <a class="wk" href="casos/distribuidora-materiales-construccion/index.html" data-reveal style="--i:3">
+      <span class="wk-pic"><img class="cover" src="assets/img/ui-inventario.png" width="1200" height="800" alt="Pantalla de un sistema de inventario: búsqueda de cemento con existencias y ubicación por bodega, pasillo y estante" style="object-position:top" loading="lazy" decoding="async"></span>
+      <strong>Distribuidora de materiales</strong>
+      <span class="wk-meta"><span>Materiales de construcción</span><span>Inventario</span></span>
+      <span class="wk-line">Del Excel al inventario en tiempo real</span>
+    </a>
+  </div>
+</section>
+
+<section class="quotes sec" aria-labelledby="h-quotes">
+  <h2 id="h-quotes" class="head" data-reveal>Lo que dicen <span class="pend">[EJEMPLO]</span></h2>
+  <figure class="quote q0" data-reveal style="--i:0">
+    <blockquote><p>“Antes contábamos el cemento a mano cada vez que alguien preguntaba. Ahora lo vemos en el celular en dos segundos.”</p></blockquote>
+    <figcaption><strong>María López</strong>, administradora, Ferretería El Pilar <span class="pend">[EJEMPLO]</span></figcaption>
+  </figure>
+  <figure class="quote q1" data-reveal style="--i:1">
+    <blockquote><p>“Cambiamos precios y fotos nosotros mismos, sin esperar a nadie.”</p></blockquote>
+    <figcaption><strong>Carlos Ruiz</strong>, gerente, Distribuidora Ruiz <span class="pend">[EJEMPLO]</span></figcaption>
+  </figure>
+  <figure class="quote q2" data-reveal style="--i:2">
+    <blockquote><p>“Siempre supe a quién escribirle. La misma persona hizo todo, de principio a fin.”</p></blockquote>
+    <figcaption><strong>Ana Morales</strong>, dueña, Óptica Morales <span class="pend">[EJEMPLO]</span></figcaption>
+  </figure>
+</section>
+
+<section class="how sheet sec" aria-labelledby="h-how">
+  <div class="how-text">
+    <h2 id="h-how" class="head" data-reveal>Cómo trabajamos</h2>
+    <p class="lead" data-reveal style="--i:1">Cuatro pasos, sin tecnicismos y con la misma persona de principio a fin. Pagas la mitad al empezar y la otra mitad cuando ya lo estás usando.</p>
+    <a class="button" href="https://wa.me/50581867161?text=Hola%2C%20vi%20Nexa505%20y%20quiero%20contarles%20lo%20que%20necesita%20mi%20negocio." target="_blank" rel="noopener" data-reveal style="--i:2">Empezar con 15 minutos</a>
+  </div>
+  <ol class="how-list">
+    <li class="how-item" data-reveal style="--i:0">
+      <div class="how-pic how-charla" data-ui aria-hidden="true"><span class="b-in">Tengo una ferretería y todo está en Excel.</span><span class="b-out">Cuéntame cuántas bodegas tienes.</span></div>
+      <div><h3>Conversamos 15 minutos</h3><p>Por WhatsApp o videollamada. Nos cuentas cómo trabajas hoy y qué te quita más tiempo.</p></div>
+    </li>
+    <li class="how-item" data-reveal style="--i:1">
+      <div class="how-pic how-propuesta" data-ui aria-hidden="true"><span class="doc-h">Propuesta</span><span class="doc-l">Sistema de inventario</span><span class="doc-p">$950</span></div>
+      <div><h3>Propuesta con precio cerrado</h3><p>Recibes por escrito qué incluye, cuánto cuesta y cuándo se entrega. Sin sorpresas después.</p></div>
+    </li>
+    <li class="how-item" data-reveal style="--i:2">
+      <div class="how-pic how-fases" data-ui aria-hidden="true"><span class="ph on">Productos</span><span class="ph on">Entradas</span><span class="ph">Reportes</span></div>
+      <div><h3>Pagas el 50% y entregamos por fases</h3><p>Ves avances reales, pruebas cada parte y pides ajustes antes de seguir.</p></div>
+    </li>
+    <li class="how-item" data-reveal style="--i:3">
+      <div class="how-pic how-entrega" data-ui aria-hidden="true"><span class="ok">Entregado</span><span class="doc-l">Capacitación: 2 sesiones</span></div>
+      <div><h3>El otro 50% al entregar</h3><p>Te enseñamos a usarlo y a administrarlo. El soporte queda disponible para dudas y mejoras.</p></div>
+    </li>
+  </ol>
+</section>
+
+<section class="pricing sec" id="precios" aria-labelledby="h-precios">
+  <div class="pricing-head">
+    <h2 id="h-precios" class="head" data-reveal>Precios y plazos</h2>
+    <p class="lead" data-reveal style="--i:1">Marca lo que necesitas y ve el rango al momento. Cada proyecto se cotiza con precio cerrado y por escrito.</p>
+  </div>
+  <form class="quote-form" action="https://wa.me/50581867161?text=" method="get" target="_blank" data-reveal>
+    <fieldset class="menu-list">
+      <legend class="sr">Servicios para cotizar</legend>
+      <label class="menu-item">
+        <input type="checkbox" value="inventario" data-n="Sistema de inventario" data-min="950" data-max="950" data-sem="6-8">
+        <span class="menu-n">Sistema de inventario</span>
+        <span class="menu-p nums">desde $950</span>
+        <span class="menu-d">Existencias y ubicación de cada producto, al día.</span>
+        <span class="menu-t">6 a 8 semanas <span class="pend">[EJEMPLO]</span></span>
+      </label>
+      <label class="menu-item">
+        <input type="checkbox" value="web" data-n="Web autoadministrable" data-min="650" data-max="750" data-sem="3-4">
+        <span class="menu-n">Web autoadministrable</span>
+        <span class="menu-p nums">$650 a $750</span>
+        <span class="menu-d">Cambias textos, precios y fotos tú mismo.</span>
+        <span class="menu-t">3 a 4 semanas <span class="pend">[EJEMPLO]</span></span>
+      </label>
+      <label class="menu-item">
+        <input type="checkbox" value="landing" data-n="Landing page" data-min="350" data-max="350" data-sem="1-2">
+        <span class="menu-n">Landing page</span>
+        <span class="menu-p nums">desde $350</span>
+        <span class="menu-d">Una página enfocada en que te escriban o te compren.</span>
+        <span class="menu-t">1 a 2 semanas <span class="pend">[EJEMPLO]</span></span>
+      </label>
+      <label class="menu-item">
+        <input type="checkbox" value="auto" data-n="Automatizaciones" data-min="350" data-max="350" data-sem="1-3">
+        <span class="menu-n">Automatizaciones</span>
+        <span class="menu-p nums">desde $350</span>
+        <span class="menu-d">Correos, reportes y tareas que se hacen solas.</span>
+        <span class="menu-t">1 a 3 semanas <span class="pend">[EJEMPLO]</span></span>
+      </label>
+      <label class="menu-item">
+        <input type="checkbox" value="app" data-n="App móvil" data-min="750" data-max="750" data-sem="8-12">
+        <span class="menu-n">App móvil</span>
+        <span class="menu-p nums">desde $750</span>
+        <span class="menu-d">Pensada para cómo trabaja tu equipo.</span>
+        <span class="menu-t">8 a 12 semanas <span class="pend">[EJEMPLO]</span></span>
+      </label>
+      <label class="menu-item">
+        <input type="checkbox" value="ia" data-n="Inteligencia artificial" data-min="" data-max="" data-sem="">
+        <span class="menu-n">Inteligencia artificial</span>
+        <span class="menu-p nums">Según alcance</span>
+        <span class="menu-d">Asistentes que buscan, resumen y arman documentos.</span>
+        <span class="menu-t">Según alcance</span>
+      </label>
+      <label class="menu-item">
+        <input type="checkbox" value="mant" data-n="Mantenimiento mensual" data-min="" data-max="" data-sem="">
+        <span class="menu-n">Mantenimiento mensual</span>
+        <span class="menu-p nums">Según alcance</span>
+        <span class="menu-d">Soporte, respaldos y mejoras cada mes.</span>
+        <span class="menu-t">Según alcance</span>
+      </label>
+    </fieldset>
+    <div class="quote-sum" aria-live="polite">
+      <p class="qs-total nums" id="q-total">Marca uno o más servicios</p>
+      <p class="qs-time" id="q-time">Los precios son de referencia; el final va en la propuesta.</p>
+      <input type="hidden" name="text" id="q-text" value="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio.">
+      <button class="button" type="submit">Pedir cotización por WhatsApp</button>
+    </div>
+  </form>
+</section>
+
+<section class="faq sec" id="preguntas" aria-labelledby="h-faq">
+  <h2 id="h-faq" class="head" data-reveal>Antes de que preguntes</h2>
+  <div class="faq-list">
+    <details class="faq-item" data-reveal style="--i:0" open><summary>¿Dependo de ustedes para actualizar mi web o sistema?</summary><p>No. Todo se entrega autoadministrable y te capacitamos para que cambies textos, precios, fotos y datos por tu cuenta.</p></details>
+    <details class="faq-item" data-reveal style="--i:1"><summary>¿Cuánto tarda un proyecto?</summary><p>Depende del servicio: una landing page, de 1 a 2 semanas; una web autoadministrable, de 3 a 4; un sistema de inventario, de 6 a 8; una app móvil, de 8 a 12. El plazo exacto va por escrito en la propuesta.</p></details>
+    <details class="faq-item" data-reveal style="--i:2"><summary>¿Cómo se paga?</summary><p>El 50% al empezar y el otro 50% al entregar. El precio es cerrado: lo que dice la propuesta es lo que pagas.</p></details>
+    <details class="faq-item" data-reveal style="--i:0"><summary>¿Trabajan con negocios fuera de Nicaragua?</summary><p>Sí. Trabajamos por videollamada y WhatsApp con negocios de otros países.</p></details>
+    <details class="faq-item" data-reveal style="--i:1"><summary>¿Y si no sé qué necesito?</summary><p>Empezamos con una conversación de 15 minutos y te decimos por dónde conviene comenzar, aunque sea algo pequeño.</p></details>
+    <details class="faq-item" data-reveal style="--i:2"><summary>¿Cuánto cuesta el mantenimiento?</summary><p>Según el alcance: no es lo mismo cuidar una landing page que un sistema de inventario con varias bodegas. Te lo cotizamos junto con el proyecto.</p></details>
+  </div>
+</section>
+
+<section class="about sheet sec" id="nosotros" aria-labelledby="h-about">
+  <div class="about-text">
+    <h2 id="h-about" class="head" data-reveal>Sobre Nexa505</h2>
+    <p class="about-lead" data-reveal style="--i:1">Nexa505 es una sola persona que te escucha, desarrolla tu proyecto, te lo entrega y te da soporte. Desde Nicaragua, con más de 6 años haciendo software para pymes.</p>
+    <p data-reveal style="--i:2">Antes trabajé en proyectos para GBM Nicaragua, Compañía Licorera de Nicaragua y Almacenadora LAFISE. Es experiencia previa: no son clientes de Nexa505.</p>
+    <p class="tech" data-reveal style="--i:3">Trabajo con React, Next.js, Angular, React Native, Laravel, Python, Django, AWS y PostgreSQL.</p>
+  </div>
+  <dl class="figs">
+    <div data-reveal><dt>años de experiencia</dt><dd>+6</dd></div>
+    <div data-reveal style="--i:1"><dt>empresas y clientes</dt><dd>+8</dd></div>
+    <div data-reveal style="--i:2"><dt>apps en producción</dt><dd>+10</dd></div>
+    <div class="fig-clock" data-reveal style="--i:3"><dt>hora en Nicaragua (+505)</dt><dd class="nums" data-clock>UTC−6</dd></div>
+  </dl>
+</section>
+
+<section class="close sec" aria-labelledby="h-close">
+  <div class="close-side" aria-hidden="true"></div>
+  <div class="close-main" data-reveal>
+    <h2 id="h-close" class="head">¿Qué te hace perder tiempo hoy?</h2>
+    <p class="lead">Cuéntanoslo aquí y se abre WhatsApp con el mensaje listo. Respondemos el mismo día.</p>
+    <form class="close-form" action="https://wa.me/50581867161?text=" method="get" target="_blank">
+      <label class="sr" for="close-q">Qué te hace perder tiempo</label>
+      <textarea id="close-q" rows="2" placeholder="Ej.: cada vez que un cliente pregunta, vamos a contar a la bodega"></textarea>
+      <input type="hidden" name="text" value="Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio." id="close-text">
+      <button class="button button-ink" type="submit">Enviar por WhatsApp</button>
+    </form>
+  </div>
+  <div class="close-side" aria-hidden="true"></div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="foot-cols">
+    <nav aria-label="Sitio"><h2>Sitio</h2><a class="link" href="index.html">Inicio</a><a class="link" href="index.html#servicios">Servicios</a><a class="link" href="casos/index.html">Casos</a><a class="link" href="index.html#precios">Precios</a><a class="link" href="index.html#preguntas">Preguntas</a></nav>
+    <nav aria-label="Casos"><h2>Casos</h2><a class="link" href="casos/distribuidora-materiales-construccion/index.html">Distribuidora de materiales</a><a class="link" href="casos/plataforma-ia-estudiantes-medicina/index.html">Plataforma de IA para medicina</a><a class="link" href="casos/cargo-trans-rediseno-web/index.html">Cargo Trans: rediseño web</a><a class="link" href="casos/wellpro-equipos-medicos-hogar/index.html">Wellpro: equipos médicos para el hogar</a><a class="link" href="casos/contollo-app-espacios-3d/index.html">Contollo: espacios decorados en 3D</a></nav>
+    <div><h2>Contacto</h2>
+      <a class="link" href="https://wa.me/50581867161?text=Hola%2C%20vi%20Nexa505%20y%20quiero%20contarles%20lo%20que%20necesita%20mi%20negocio." target="_blank" rel="noopener">WhatsApp +505 8186 7161</a>
+      <span>Desde Nicaragua, para pymes de aquí y de fuera</span>
+    </div>
+  </div>
+  <p class="foot-name" aria-hidden="true">Nexa505</p>
+  <div class="foot-last">
+    <span>© 2026 Nexa505</span>
+    
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
