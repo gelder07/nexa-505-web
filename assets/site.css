@@ -29,6 +29,7 @@
   --m: clamp(12px, 1.2vw, 16px);         /* margen exterior de las hojas */
   --pad: clamp(20px, 5vw, 80px);         /* margen interior del contenido */
   --max: 1200px;
+  --frame: 1680px;                       /* ancho máximo del sitio en pantallas grandes */
   --gap-sec: clamp(96px, 12vw, 180px);
   --r-sheet: clamp(24px, 2.6vw, 40px);
   --r: 20px;
@@ -78,7 +79,7 @@ h1 { font-size: var(--fs-display); }
 .round:active { transform: scale(.92); }
 
 /* ---------- barra superior ---------- */
-.top { position: sticky; top: var(--m); z-index: 20; display: flex; align-items: center; gap: 28px; max-width: calc(var(--max) + 2 * var(--pad)); margin: var(--m) auto 0; padding: 10px 10px 10px 24px; background: var(--sheet); border-radius: 999px; width: calc(100% - 2 * var(--m)); }
+.top { position: sticky; top: var(--m); z-index: 20; display: flex; align-items: center; gap: 28px; width: min(100% - 2 * var(--m), var(--frame) - 2 * var(--m)); margin: var(--m) auto 0; padding: 10px 10px 10px 24px; background: var(--sheet); border-radius: 999px; }
 .mark { font-weight: 600; font-size: 22px; letter-spacing: -0.03em; text-decoration: none; margin-right: auto; }
 .nav { display: flex; gap: 26px; font-size: 16px; }
 .menu { display: none; position: relative; }
@@ -89,6 +90,7 @@ h1 { font-size: var(--fs-display); }
 .menu nav a:hover { background: var(--tile); }
 
 /* ---------- hojas y secciones ---------- */
+main { max-width: var(--frame); margin-inline: auto; }
 .sheet { background: var(--sheet); border-radius: var(--r-sheet); margin-inline: var(--m); }
 .sheet-dark { background: var(--dark); color: var(--sheet); }
 .sec { margin-top: var(--gap-sec); }
@@ -170,7 +172,7 @@ td.low, .low { color: var(--low); }
 .srv { padding-inline: 0 !important; }
 .srv-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding-inline: var(--pad); }
 .srv-ctrl { display: flex; gap: 10px; }
-.deck { max-width: none; display: flex; gap: 28px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 56px max(var(--pad), calc((100vw - var(--max)) / 2)) 48px; scrollbar-width: none; }
+.deck { max-width: none; display: flex; gap: 28px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 56px max(var(--pad), calc((100% - var(--max)) / 2)) 48px; scrollbar-width: none; }
 .deck::-webkit-scrollbar { display: none; }
 .card { flex: 0 0 clamp(270px, 26vw, 340px); scroll-snap-align: center; display: flex; flex-direction: column; gap: 12px; padding: 16px 16px 22px; border-radius: 28px; background: var(--c); transform: rotate(var(--rot)); transition: transform .45s var(--ease); }
 .card:hover, .card:focus-within { transform: rotate(0deg) translateY(-8px); }
@@ -219,14 +221,14 @@ td.low, .low { color: var(--low); }
 .steps .head { color: var(--sheet); }
 .steps-grid { display: grid; grid-template-columns: minmax(280px, .8fr) 1.4fr; gap: clamp(32px, 5vw, 80px); margin-top: 24px; }
 .steps-list { counter-reset: paso; }
-.step { counter-increment: paso; min-height: 72vh; display: flex; flex-direction: column; justify-content: center; opacity: .35; transition: opacity .4s; }
+.step { counter-increment: paso; min-height: min(72vh, 760px); display: flex; flex-direction: column; justify-content: center; opacity: .35; transition: opacity .4s; }
 .step.is-on { opacity: 1; }
 .step::before { content: counter(paso); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--accent); color: var(--ink); font-weight: 600; font-size: 20px; margin-bottom: 24px; }
 .step h3 { font-size: clamp(28px, 2.6vw, 38px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; }
 .step > p { margin-top: 16px; font-size: var(--fs-lead); color: #d6d5cd; max-width: 26em; }
 .step-pic { display: none; }
 .steps-stage { position: relative; }
-.steps-frame { position: sticky; top: 12vh; height: 76vh; border-radius: var(--r); background: var(--accent); padding: clamp(24px, 3vw, 48px) 0 clamp(24px, 3vw, 48px) clamp(24px, 3vw, 48px); overflow: hidden; }
+.steps-frame { position: sticky; top: 12vh; height: min(76vh, 780px); border-radius: var(--r); background: var(--accent); padding: clamp(24px, 3vw, 48px) 0 clamp(24px, 3vw, 48px) clamp(24px, 3vw, 48px); overflow: hidden; }
 .stage-screen { visibility: hidden; position: absolute; inset: clamp(24px, 3vw, 48px) 0 clamp(24px, 3vw, 48px) clamp(24px, 3vw, 48px); opacity: 0; transform: translateY(24px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
 .stage-screen.is-on { visibility: visible; opacity: 1; transform: none; }
 .stage-screen .win { height: 100%; border-radius: var(--r-sm) 0 0 var(--r-sm); }
@@ -385,7 +387,7 @@ td.low, .low { color: var(--low); }
 .close-form:focus-within { outline: 3px solid var(--ink); outline-offset: 2px; }
 
 /* ---------- pie ---------- */
-.foot { margin: var(--gap-sec) var(--m) var(--m); background: var(--sheet); border-radius: var(--r-sheet); padding: clamp(40px, 5vw, 72px) var(--pad) 28px; overflow: hidden; }
+.foot { width: min(100% - 2 * var(--m), var(--frame) - 2 * var(--m)); margin: var(--gap-sec) auto var(--m); background: var(--sheet); border-radius: var(--r-sheet); padding: clamp(40px, 5vw, 72px) var(--pad) 28px; overflow: hidden; }
 .foot > * { max-width: var(--max); margin-inline: auto; }
 .foot-cols { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 32px; }
 .foot-cols > * { display: grid; gap: 8px; align-content: start; justify-items: start; }
