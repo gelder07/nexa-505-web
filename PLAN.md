@@ -77,7 +77,7 @@ Lo marcado **[EJEMPLO]** es provisional: va en la web nueva para ver el diseño 
 
 - [x] Llenar la primera pantalla en computadora: ahora la ocupa la demo del inventario.
 - [x] Escribir las cifras igual: "+6", "+8", "+10".
-- [x] Agregar la imagen de vista previa (`assets/og.png`). Falta poner la dirección completa cuando haya dominio: WhatsApp no lee rutas relativas.
+- [x] Agregar la imagen de vista previa (`assets/og.png`), con la dirección completa de GitHub Pages.
 - [ ] Quitar los avisos "[PENDIENTE]" cuando lleguen los datos de la fase 1. Hecho para plazos, pago, mantenimiento y correo; quedan los de las páginas de casos (capturas, resultados, frases de clientes).
 - [x] Cotizador rápido: el cliente elige servicios, ve el rango de precio y se abre WhatsApp con el mensaje ya escrito.
 
@@ -97,7 +97,7 @@ Lo marcado **[EJEMPLO]** es provisional: va en la web nueva para ver el diseño 
 
 ## Fase 5: Publicar (juntos)
 
-- [ ] Dominio y hosting: definir dónde se publica.
+- [ ] Dominio y hosting: publicado en GitHub Pages (https://gelder07.github.io/nexa-505-web/). Falta dominio propio.
 - [ ] Revisión final de enlaces, WhatsApp y celular.
 - [ ] Publicar.
 

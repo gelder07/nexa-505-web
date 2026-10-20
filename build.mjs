@@ -7,6 +7,8 @@ const WA = 'https://wa.me/50581867161?text=';
 const MSG = 'Hola, vi Nexa505 y quiero contarles lo que necesita mi negocio.';
 const wa = (msg = MSG) => WA + encodeURIComponent(msg);
 const ext = 'target="_blank" rel="noopener"';
+// Dirección pública del sitio. WhatsApp necesita la dirección completa de la imagen de vista previa; cámbiala si pasa a un dominio propio.
+const SITE = 'https://gelder07.github.io/nexa-505-web/';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 // Los textos que empiezan por PENDIENTE se marcan para que nadie los publique sin querer.
@@ -43,8 +45,7 @@ function layout({ p, title, desc, body, current }) {
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_NI">
-<!-- PENDIENTE: cuando haya dominio, poner la dirección completa (https://dominio/assets/og.png); WhatsApp no lee rutas relativas. -->
-<meta property="og:image" content="${p}assets/og.png">
+<meta property="og:image" content="${SITE}assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">

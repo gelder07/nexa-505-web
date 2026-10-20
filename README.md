@@ -34,8 +34,8 @@ Para agregar un caso, copia un objeto en `casos.mjs`, cambia el `slug` y los tex
 
 - Los textos que empiezan con `PENDIENTE` se muestran resaltados en amarillo hasta que se reemplazan.
 - Lo marcado como **[EJEMPLO]** (testimonios y plazos) es provisional y hay que cambiarlo.
-- Cuando haya dominio, cambia `og:image` en `build.mjs` por la dirección completa (`https://dominio/assets/og.png`); WhatsApp no lee rutas relativas.
+- Si el sitio pasa a un dominio propio, cambia `SITE` en `build.mjs`: la imagen de vista previa usa esa dirección completa.
 
 ## Publicar
 
-El sitio funciona en cualquier hosting estático, sin paso de compilación. En GitHub Pages: Settings → Pages → rama `main`, carpeta raíz.
+Publicado en GitHub Pages: https://gelder07.github.io/nexa-505-web/ (rama `main`, carpeta raíz). Cada cambio que se sube a `main` se publica solo en uno o dos minutos.
