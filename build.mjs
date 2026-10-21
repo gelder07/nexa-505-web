@@ -128,14 +128,14 @@ const ESPARCIDO = ['Excel de inventario', 'Cuaderno de ventas', 'Grupo de WhatsA
 
 const PROBLEMAS = [
   { frase: 'No sabemos cuánto stock tenemos.', servicio: 'Sistema de inventario', detalle: 'Existencias al día, por producto y por bodega.', precio: 'desde $950' },
-  { frase: 'Cuando un cliente pregunta, hay que ir a contar de nuevo.', servicio: 'Sistema de inventario', detalle: 'Buscas el producto y ves cuántos hay y en qué estante están.', precio: 'desde $950' },
-  { frase: 'Todo lo llevamos en Excel.', servicio: 'Sistema de inventario', detalle: 'Tus hojas pasan a un sistema que todo el equipo usa al mismo tiempo.', precio: 'desde $950' },
+  { frase: 'Los vendedores anotan los pedidos en papel.', servicio: 'App móvil', detalle: 'Tu equipo registra pedidos y visitas desde el celular, y tú lo ves al momento.', precio: 'desde $750' },
   { frase: 'Pasamos horas haciendo lo mismo a mano.', servicio: 'Automatizaciones', detalle: 'Correos, reportes y tareas repetitivas que se hacen solas.', precio: 'desde $350' },
   { frase: 'Nuestra web está vieja y no podemos cambiarla.', servicio: 'Web autoadministrable', detalle: 'Cambias textos, precios y fotos tú mismo, sin esperar a un técnico.', precio: '$650 a $750' },
+  { frase: 'Perdemos horas buscando en documentos.', servicio: 'Inteligencia artificial', detalle: 'Un asistente que busca en tus documentos y te responde con la fuente.', precio: 'Según alcance' },
 ];
 
 // Servicios: alimentan el carrusel, la lista de precios y el cotizador.
-// min/max en dólares (null = según alcance); sem = plazo en semanas [EJEMPLO].
+// min/max en dólares (null = según alcance); sem = plazo en semanas.
 const SERVICIOS = [
   { id: 'inventario', n: 'Sistema de inventario', d: 'Existencias y ubicación de cada producto, al día.', precio: 'desde $950', min: 950, sem: [6, 8], color: 'lima', caso: 0, dibujo: 'inventario' },
   { id: 'web', n: 'Web autoadministrable', d: 'Cambias textos, precios y fotos tú mismo.', precio: '$650 a $750', min: 650, max: 750, sem: [3, 4], color: 'cielo', caso: 2, dibujo: 'web' },
@@ -185,7 +185,7 @@ const DIBUJOS = {
   mant: `<div class="d-check"><span>Respaldo diario<b>2:00 a. m.</b></span><span>Actualizaciones<b>Al día</b></span><span>Cambio pedido: precio del cemento<b>Hecho</b></span></div>`,
 };
 
-// Pantallas de "Inventario paso a paso": misma tienda, mismos números que la demo de arriba.
+// Pantallas de "Inventario paso a paso": misma tienda, mismos números que la demo del inicio.
 const VENDIDOS = [['Cemento gris 42.5 kg', 64, 390], ['Varilla corrugada 3/8', 80, 168], ['Lámina de zinc', 15, 520], ['Bloque de concreto 15 cm', 200, 32], ['Pintura de aceite blanca', 4, 780]];
 const totalVentas = VENDIDOS.reduce((s, [, q, pr]) => s + q * pr, 0);
 const maxVenta = Math.max(...VENDIDOS.map(([, q, pr]) => q * pr));
@@ -211,6 +211,46 @@ const PASOS_INV = [
   ['Registras una entrada', 'Llega el camión, anotas la cantidad y el número se actualiza para todo el equipo al mismo tiempo.'],
   ['Ves el reporte del día', 'Qué se vendió, cuánto entró y qué hay que reponer antes de que se acabe.'],
 ];
+// Demo en vivo: buscador sobre el inventario de ejemplo. Es la portada del caso de inventario.
+const demoInventario = () => `<div class="demo" data-rise style="--i:3">
+    <div class="win win-demo" data-ui>
+      <div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span><span class="win-tag">Demo en vivo</span></div>
+      <div class="demo-grid">
+        <ul class="demo-side" aria-label="Menú de la demo">
+          <li class="on">Productos <b>1,284</b></li><li>Entradas <b>38</b></li><li>Salidas <b>211</b></li><li>Bodegas <b>3</b></li><li>Reportes</li>
+        </ul>
+        <div class="demo-main">
+          <label class="demo-search"><span class="sr">Buscar un producto</span>
+            <input id="inv-q" type="search" placeholder="Escribe un producto: cemento, varilla, pintura…" autocomplete="off" spellcheck="false">
+          </label>
+          <p class="demo-count" aria-live="polite"><span id="inv-n">${PRODUCTOS.length} productos</span> · existencias en tiempo real</p>
+          <p class="demo-empty" hidden>Ese producto no está en la demo. En tu sistema estarían todos los tuyos.</p>
+          <div class="demo-table"><table>
+            <thead><tr><th>Producto</th><th>Existencia</th><th>Ubicación</th><th>Precio</th></tr></thead>
+            <tbody id="inv-rows">${PRODUCTOS.map(invRow).join('')}</tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+// Demostración del sistema, paso a paso: vive en la página del caso de inventario.
+const pasoAPaso = () => `<section class="steps sheet sheet-dark sec" aria-labelledby="h-steps">
+  <h2 id="h-steps" class="head steps-h" data-reveal>El sistema, paso a paso</h2>
+  <div class="steps-grid">
+    <ol class="steps-list">
+      ${PASOS_INV.map(([h, d], i) => `<li class="step" data-step="${i}">
+        <h3>${esc(h)}</h3>
+        <p>${esc(d)}</p>
+        <div class="step-pic">${ventana(PANTALLAS[i])}</div>
+      </li>`).join('\n      ')}
+    </ol>
+    <div class="steps-stage" aria-hidden="true">
+      <div class="steps-frame">${PANTALLAS.map((s, i) => `<div class="stage-screen${i === 0 ? ' is-on' : ''}" data-screen="${i}">${ventana(s)}</div>`).join('')}</div>
+    </div>
+  </div>
+</section>`;
 const ventana = (inner, titulo = 'Inventario') => `<div class="win" data-ui><div class="win-bar"><strong>${titulo}</strong><span>${titulo === 'Inventario' ? 'Ferretería El Pilar · Bodega central' : 'Fuentes filtradas'}</span></div><div class="win-body">${inner}</div></div>`;
 
 // Teléfono con Contollo: la sala en 3D y los muebles que caen en su lugar.
@@ -254,28 +294,6 @@ function home() {
     <div class="hero-actions" data-rise style="--i:2">
       <a class="button" href="${wa()}" ${ext}>Escríbenos por WhatsApp</a>
       <a class="button button-soft" href="casos/index.html">Ver casos</a>
-    </div>
-  </div>
-  <div class="demo" data-rise style="--i:3">
-    <div class="win win-demo" data-ui>
-      <div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span><span class="win-tag">Demo en vivo</span></div>
-      <div class="demo-grid">
-        <ul class="demo-side" aria-label="Menú de la demo">
-          <li class="on">Productos <b>1,284</b></li><li>Entradas <b>38</b></li><li>Salidas <b>211</b></li><li>Bodegas <b>3</b></li><li>Reportes</li>
-        </ul>
-        <div class="demo-main">
-          <label class="demo-search"><span class="sr">Buscar un producto</span>
-            <input id="inv-q" type="search" placeholder="Escribe un producto: cemento, varilla, pintura…" autocomplete="off" spellcheck="false">
-          </label>
-          <p class="demo-count" aria-live="polite"><span id="inv-n">${PRODUCTOS.length} productos</span> · existencias en tiempo real</p>
-          <p class="demo-empty" hidden>Ese producto no está en la demo. En tu sistema estarían todos los tuyos.</p>
-          <div class="demo-table"><table>
-            <thead><tr><th>Producto</th><th>Existencia</th><th>Ubicación</th><th>Precio</th></tr></thead>
-            <tbody id="inv-rows">${PRODUCTOS.map(invRow).join('')}</tbody>
-          </table>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -327,22 +345,6 @@ function home() {
       <p class="card-foot"><span class="nums">${esc(s.precio)}</span>${caseLink(s)}</p>
     </li>`).join('\n    ')}
   </ul>
-</section>
-
-<section class="steps sheet sheet-dark sec" aria-labelledby="h-steps">
-  <h2 id="h-steps" class="head steps-h" data-reveal>Tu inventario, paso a paso</h2>
-  <div class="steps-grid">
-    <ol class="steps-list">
-      ${PASOS_INV.map(([h, d], i) => `<li class="step" data-step="${i}">
-        <h3>${esc(h)}</h3>
-        <p>${esc(d)}</p>
-        <div class="step-pic">${ventana(PANTALLAS[i])}</div>
-      </li>`).join('\n      ')}
-    </ol>
-    <div class="steps-stage" aria-hidden="true">
-      <div class="steps-frame">${PANTALLAS.map((s, i) => `<div class="stage-screen${i === 0 ? ' is-on' : ''}" data-screen="${i}">${ventana(s)}</div>`).join('')}</div>
-    </div>
-  </div>
 </section>
 
 <section class="apps sec" aria-labelledby="h-apps">
@@ -427,7 +429,7 @@ function home() {
         <span class="menu-n">${esc(s.n)}</span>
         <span class="menu-p nums">${esc(s.precio)}</span>
         <span class="menu-d">${esc(s.d)}</span>
-        <span class="menu-t">${plazo(s)}${s.sem ? ` ${EJ}` : ''}</span>
+        <span class="menu-t">${plazo(s)}</span>
       </label>`).join('\n      ')}
     </fieldset>
     <div class="quote-sum" aria-live="polite">
@@ -532,7 +534,6 @@ function caso(c, i) {
   const msg = `Hola, vi el caso "${c.titulo}" en Nexa505 y quiero algo así para mi negocio.`;
   // Pantallas dibujadas del tipo de proyecto, mientras llegan las capturas reales.
   const screens = {
-    inventario: PASOS_INV.map(([h], k) => [h, ventana(PANTALLAS[k])]),
     ia: [['Pregunta y respuesta con fuentes', ventana(IA_SCREENS[0], 'Asistente médico')], ['Presentación generada', ventana(IA_SCREENS[1], 'Asistente médico')]],
     apps: [['La sala escaneada, decorada en 3D', `<div class="cs-phone">${PHONE_CONTOLLO}</div>`]],
   }[c.filtro] || [];
@@ -544,10 +545,10 @@ function caso(c, i) {
     <h1 id="h1" data-rise>${esc(c.titulo)}</h1>
     <p class="wk-meta case-rubro" data-rise style="--i:1"><span>${esc(c.rubro)}</span><span>${esc(c.etiqueta)}</span></p>
     <p class="hero-sub" data-rise style="--i:2">${esc(c.resumen)}</p>
-    <figure class="case-hero" data-rise style="--i:3">
+    ${c.filtro === 'inventario' ? demoInventario() : `<figure class="case-hero" data-rise style="--i:3">
       <div class="case-hero-pic">${img(p, c.portada.src, c.portada.w, c.portada.h, c.portada.alt, { eager: true, pos: 'top' })}</div>
       ${c.portadaNota ? `<figcaption class="small">${c.portadaNota.split('PENDIENTE').map((s, k) => (k ? t('PENDIENTE' + s) : esc(s))).join('')}</figcaption>` : ''}
-    </figure>
+    </figure>`}
   </header>
 
   <div class="case-board sec">
@@ -560,6 +561,8 @@ function caso(c, i) {
       <p>${t(c.hicimos)}</p>
     </section>
   </div>
+
+  ${c.filtro === 'inventario' ? pasoAPaso() : ''}
 
   <section class="case-gal sheet sec" aria-labelledby="h-gal">
     <h2 id="h-gal" class="head" data-reveal>Fotos y capturas</h2>

@@ -100,7 +100,7 @@ section.sec:not(.sheet), .case-board, .index-list { padding-inline: var(--pad); 
 .sheet { padding: clamp(56px, 8vw, 120px) var(--pad); }
 
 /* ---------- primera pantalla ---------- */
-.hero { margin-top: var(--m); padding-top: clamp(64px, 9vw, 130px); padding-bottom: var(--m); padding-inline: var(--m); text-align: center; overflow: hidden; }
+.hero { margin-top: var(--m); padding-block: clamp(64px, 9vw, 130px); padding-inline: var(--m); text-align: center; overflow: hidden; }
 .hero-text { padding-inline: var(--pad); }
 .hero h1 { max-width: 11em; margin-inline: auto; }
 .hero-sub { font-size: var(--fs-lead); max-width: 32em; margin: 36px auto 0; }
@@ -265,7 +265,7 @@ td.low, .low { color: var(--low); }
 .apps { display: grid; gap: clamp(64px, 8vw, 120px); }
 .app-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
 .app-row-flip .app-panel { order: 2; }
-.app-panel { height: clamp(520px, 52vw, 680px); border-radius: var(--r-sheet); background: var(--tile-2); display: grid; place-items: center; overflow: hidden; }
+.app-panel { height: clamp(440px, min(52vw, 82vh), 680px); border-radius: var(--r-sheet); background: var(--tile-2); display: grid; place-items: center; overflow: hidden; }
 .app-panel-red { background: #e9c9c2; }
 .app-text { display: grid; gap: 24px; justify-items: start; }
 .phone { width: 300px; height: 620px; background: var(--ink); border-radius: 46px; padding: 12px; transform: translateY(40px); }
@@ -287,6 +287,9 @@ td.low, .low { color: var(--low); }
 .ph-cat span:nth-child(3)::before { background: var(--menta); }
 .phone-scroll img { height: auto; animation: scrollshot 14s ease-in-out infinite alternate; }
 @keyframes scrollshot { 0%, 10% { transform: translateY(0); } 90%, 100% { transform: translateY(calc(-100% + 596px)); } }
+/* laptops con poca altura: el teléfono se achica entero para caber en la pantalla */
+@media (min-width: 641px) and (max-height: 860px) { .phone { zoom: .82; } }
+@media (min-width: 641px) and (max-height: 720px) { .phone { zoom: .7; } }
 
 /* ---------- casos ---------- */
 .work-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
@@ -421,7 +424,7 @@ td.low, .low { color: var(--low); }
 
 /* ---------- página de caso ---------- */
 .case-head { margin-top: var(--m); text-align: center; padding-bottom: var(--m); padding-inline: var(--m); }
-.case-head > :not(.case-hero) { padding-inline: var(--pad); }
+.case-head > :not(.case-hero, .demo) { padding-inline: var(--pad); }
 .crumbs { font-size: var(--fs-small); color: var(--ink-2); margin-bottom: 28px; }
 .case-head h1 { font-size: clamp(36px, 5.2vw, 80px); max-width: 15em; margin-inline: auto; }
 .case-rubro { justify-content: center; gap: 18px; margin-top: 20px; font-size: 16px; }
@@ -530,7 +533,7 @@ td.low, .low { color: var(--low); }
   :root { --fs-body: 16px; --pad: 16px; }
   .top { padding-left: 18px; }
   .top-cta { display: none; }
-  .hero { padding-top: 56px; }
+  .hero { padding-block: 56px; }
   .hero-sub { margin-top: 24px; }
   .hero-actions .button { width: 100%; }
   .demo { margin-top: 40px; }

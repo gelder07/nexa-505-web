@@ -51,10 +51,28 @@
     <h1 id="h1" data-rise>Distribuidora de materiales</h1>
     <p class="wk-meta case-rubro" data-rise style="--i:1"><span>Materiales de construcción</span><span>Inventario</span></p>
     <p class="hero-sub" data-rise style="--i:2">Una distribuidora que llevaba su inventario en Excel y contaba de nuevo cada vez que un cliente preguntaba. Hoy sabe cuánto tiene y dónde está cada producto.</p>
-    <figure class="case-hero" data-rise style="--i:3">
-      <div class="case-hero-pic"><img class="cover" src="../../assets/img/ui-inventario.png" width="1200" height="800" alt="Pantalla de un sistema de inventario: búsqueda de cemento con existencias y ubicación por bodega, pasillo y estante" style="object-position:top" fetchpriority="high" decoding="async"></div>
-      <figcaption class="small">Ilustración del tipo de sistema. <span class="pend">[PENDIENTE: capturas reales del proyecto (difuminar precios y datos internos)]</span></figcaption>
-    </figure>
+    <div class="demo" data-rise style="--i:3">
+    <div class="win win-demo" data-ui>
+      <div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span><span class="win-tag">Demo en vivo</span></div>
+      <div class="demo-grid">
+        <ul class="demo-side" aria-label="Menú de la demo">
+          <li class="on">Productos <b>1,284</b></li><li>Entradas <b>38</b></li><li>Salidas <b>211</b></li><li>Bodegas <b>3</b></li><li>Reportes</li>
+        </ul>
+        <div class="demo-main">
+          <label class="demo-search"><span class="sr">Buscar un producto</span>
+            <input id="inv-q" type="search" placeholder="Escribe un producto: cemento, varilla, pintura…" autocomplete="off" spellcheck="false">
+          </label>
+          <p class="demo-count" aria-live="polite"><span id="inv-n">14 productos</span> · existencias en tiempo real</p>
+          <p class="demo-empty" hidden>Ese producto no está en la demo. En tu sistema estarían todos los tuyos.</p>
+          <div class="demo-table"><table>
+            <thead><tr><th>Producto</th><th>Existencia</th><th>Ubicación</th><th>Precio</th></tr></thead>
+            <tbody id="inv-rows"><tr data-k="cemento gris 42.5 kg"><td>Cemento gris 42.5 kg</td><td class="n">340 bolsas</td><td><span class="loc">Bodega 1 · Pasillo B · Estante 2</span></td><td class="n">C$ 390</td></tr><tr data-k="cemento blanco 20 kg"><td>Cemento blanco 20 kg</td><td class="n">46 bolsas</td><td><span class="loc">Bodega 1 · Pasillo B · Estante 4</span></td><td class="n">C$ 610</td></tr><tr data-k="mortero premezclado 40 kg"><td>Mortero premezclado 40 kg</td><td class="n low">8 bolsas</td><td><span class="loc">Bodega 2 · Pasillo A · Estante 1</span></td><td class="n">C$ 285</td></tr><tr data-k="pegamento para ceramica 20 kg"><td>Pegamento para cerámica 20 kg</td><td class="n">122 bolsas</td><td><span class="loc">Bodega 2 · Pasillo C · Estante 3</span></td><td class="n">C$ 330</td></tr><tr data-k="varilla corrugada 3/8 × 6 m"><td>Varilla corrugada 3/8 × 6 m</td><td class="n">915 unid.</td><td><span class="loc">Patio · Rack 5</span></td><td class="n">C$ 168</td></tr><tr data-k="varilla corrugada 1/2 × 6 m"><td>Varilla corrugada 1/2 × 6 m</td><td class="n">430 unid.</td><td><span class="loc">Patio · Rack 6</span></td><td class="n">C$ 298</td></tr><tr data-k="bloque de concreto 15 cm"><td>Bloque de concreto 15 cm</td><td class="n">2,400 unid.</td><td><span class="loc">Patio · Zona A</span></td><td class="n">C$ 32</td></tr><tr data-k="arena de rio"><td>Arena de río</td><td class="n">18 m³</td><td><span class="loc">Patio · Zona C</span></td><td class="n">C$ 950</td></tr><tr data-k="lamina de zinc cal. 26 × 12 pies"><td>Lámina de zinc cal. 26 × 12 pies</td><td class="n">260 unid.</td><td><span class="loc">Bodega 3 · Pasillo A · Estante 1</span></td><td class="n">C$ 520</td></tr><tr data-k="clavo de 3 pulgadas"><td>Clavo de 3 pulgadas</td><td class="n">96 lb</td><td><span class="loc">Bodega 1 · Pasillo D · Gaveta 7</span></td><td class="n">C$ 45</td></tr><tr data-k="tubo pvc 1/2 pulgada × 6 m"><td>Tubo PVC 1/2 pulgada × 6 m</td><td class="n low">7 unid.</td><td><span class="loc">Bodega 3 · Pasillo B · Estante 2</span></td><td class="n">C$ 115</td></tr><tr data-k="pintura de aceite blanca"><td>Pintura de aceite blanca</td><td class="n">64 galones</td><td><span class="loc">Bodega 2 · Pasillo D · Estante 1</span></td><td class="n">C$ 780</td></tr><tr data-k="tabla de pino 1 × 12 × 12 pies"><td>Tabla de pino 1 × 12 × 12 pies</td><td class="n">150 unid.</td><td><span class="loc">Bodega 3 · Pasillo C · Estante 4</span></td><td class="n">C$ 410</td></tr><tr data-k="alambre de amarre"><td>Alambre de amarre</td><td class="n">210 lb</td><td><span class="loc">Bodega 1 · Pasillo D · Gaveta 2</span></td><td class="n">C$ 52</td></tr></tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </header>
 
   <div class="case-board sec">
@@ -68,24 +86,64 @@
     </section>
   </div>
 
+  <section class="steps sheet sheet-dark sec" aria-labelledby="h-steps">
+  <h2 id="h-steps" class="head steps-h" data-reveal>El sistema, paso a paso</h2>
+  <div class="steps-grid">
+    <ol class="steps-list">
+      <li class="step" data-step="0">
+        <h3>Buscas un producto</h3>
+        <p>Escribes las primeras letras y el sistema te sugiere el producto, aunque no recuerdes el nombre exacto.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-search"><span class="s-input">cem<span class="caret"></span></span>
+    <ul class="s-sug"><li class="on">Cemento gris 42.5 kg</li><li>Cemento blanco 20 kg</li><li>Mortero premezclado 40 kg</li></ul></div></div></div></div>
+      </li>
+      <li class="step" data-step="1">
+        <h3>Ves cuánto hay y dónde está</h3>
+        <p>Existencias, precio y el estante exacto. Ya nadie tiene que ir a la bodega a contar.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-detail"><p class="s-title">Cemento gris 42.5 kg</p>
+    <p class="s-big">340 <span>bolsas</span></p>
+    <p class="loc loc-big">Bodega 1 · Pasillo B · Estante 2</p>
+    <dl class="s-facts"><div><dt>Precio</dt><dd>C$ 390</dd></div><div><dt>Vendidas este mes</dt><dd>512 bolsas</dd></div><div><dt>Última entrada</dt><dd>15 de octubre</dd></div></dl></div></div></div></div>
+      </li>
+      <li class="step" data-step="2">
+        <h3>Registras una entrada</h3>
+        <p>Llega el camión, anotas la cantidad y el número se actualiza para todo el equipo al mismo tiempo.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-form"><p class="s-title">Nueva entrada</p>
+    <div class="s-field"><span>Producto</span><b>Cemento gris 42.5 kg</b></div>
+    <div class="s-field"><span>Cantidad</span><b>+ 120 bolsas</b></div>
+    <div class="s-field"><span>Proveedor</span><b>Cementera del Norte</b></div>
+    <p class="s-toast">Entrada guardada: de 340 a 460 bolsas</p></div></div></div></div>
+      </li>
+      <li class="step" data-step="3">
+        <h3>Ves el reporte del día</h3>
+        <p>Qué se vendió, cuánto entró y qué hay que reponer antes de que se acabe.</p>
+        <div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-report"><p class="s-title">Ventas de hoy <b>C$ 55,720</b></p>
+    <ul class="s-bars"><li><span>Cemento gris 42.5 kg</span><i style="--w:100.0%"></i><b>C$ 24,960</b></li><li><span>Varilla corrugada 3/8</span><i style="--w:53.8%"></i><b>C$ 13,440</b></li><li><span>Lámina de zinc</span><i style="--w:31.3%"></i><b>C$ 7,800</b></li><li><span>Bloque de concreto 15 cm</span><i style="--w:25.6%"></i><b>C$ 6,400</b></li><li><span>Pintura de aceite blanca</span><i style="--w:12.5%"></i><b>C$ 3,120</b></li></ul>
+    <p class="s-note">Por reponer: Mortero premezclado (8 bolsas) y Tubo PVC (7 unid.)</p></div></div></div></div>
+      </li>
+    </ol>
+    <div class="steps-stage" aria-hidden="true">
+      <div class="steps-frame"><div class="stage-screen is-on" data-screen="0"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-search"><span class="s-input">cem<span class="caret"></span></span>
+    <ul class="s-sug"><li class="on">Cemento gris 42.5 kg</li><li>Cemento blanco 20 kg</li><li>Mortero premezclado 40 kg</li></ul></div></div></div></div><div class="stage-screen" data-screen="1"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-detail"><p class="s-title">Cemento gris 42.5 kg</p>
+    <p class="s-big">340 <span>bolsas</span></p>
+    <p class="loc loc-big">Bodega 1 · Pasillo B · Estante 2</p>
+    <dl class="s-facts"><div><dt>Precio</dt><dd>C$ 390</dd></div><div><dt>Vendidas este mes</dt><dd>512 bolsas</dd></div><div><dt>Última entrada</dt><dd>15 de octubre</dd></div></dl></div></div></div></div><div class="stage-screen" data-screen="2"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-form"><p class="s-title">Nueva entrada</p>
+    <div class="s-field"><span>Producto</span><b>Cemento gris 42.5 kg</b></div>
+    <div class="s-field"><span>Cantidad</span><b>+ 120 bolsas</b></div>
+    <div class="s-field"><span>Proveedor</span><b>Cementera del Norte</b></div>
+    <p class="s-toast">Entrada guardada: de 340 a 460 bolsas</p></div></div></div></div><div class="stage-screen" data-screen="3"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-report"><p class="s-title">Ventas de hoy <b>C$ 55,720</b></p>
+    <ul class="s-bars"><li><span>Cemento gris 42.5 kg</span><i style="--w:100.0%"></i><b>C$ 24,960</b></li><li><span>Varilla corrugada 3/8</span><i style="--w:53.8%"></i><b>C$ 13,440</b></li><li><span>Lámina de zinc</span><i style="--w:31.3%"></i><b>C$ 7,800</b></li><li><span>Bloque de concreto 15 cm</span><i style="--w:25.6%"></i><b>C$ 6,400</b></li><li><span>Pintura de aceite blanca</span><i style="--w:12.5%"></i><b>C$ 3,120</b></li></ul>
+    <p class="s-note">Por reponer: Mortero premezclado (8 bolsas) y Tubo PVC (7 unid.)</p></div></div></div></div></div>
+    </div>
+  </div>
+</section>
+
   <section class="case-gal sheet sec" aria-labelledby="h-gal">
     <h2 id="h-gal" class="head" data-reveal>Fotos y capturas</h2>
     <div class="gal">
       
       <div class="gal-pend" data-reveal style="--i:2"><span class="pend">[PENDIENTE: fotos de la bodega y capturas del sistema]</span></div>
     </div>
-    <div class="case-screens"><figure class="cs" data-reveal style="--i:0"><div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-search"><span class="s-input">cem<span class="caret"></span></span>
-    <ul class="s-sug"><li class="on">Cemento gris 42.5 kg</li><li>Cemento blanco 20 kg</li><li>Mortero premezclado 40 kg</li></ul></div></div></div></div><figcaption>Buscas un producto</figcaption></figure><figure class="cs" data-reveal style="--i:1"><div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-detail"><p class="s-title">Cemento gris 42.5 kg</p>
-    <p class="s-big">340 <span>bolsas</span></p>
-    <p class="loc loc-big">Bodega 1 · Pasillo B · Estante 2</p>
-    <dl class="s-facts"><div><dt>Precio</dt><dd>C$ 390</dd></div><div><dt>Vendidas este mes</dt><dd>512 bolsas</dd></div><div><dt>Última entrada</dt><dd>15 de octubre</dd></div></dl></div></div></div></div><figcaption>Ves cuánto hay y dónde está</figcaption></figure><figure class="cs" data-reveal style="--i:2"><div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-form"><p class="s-title">Nueva entrada</p>
-    <div class="s-field"><span>Producto</span><b>Cemento gris 42.5 kg</b></div>
-    <div class="s-field"><span>Cantidad</span><b>+ 120 bolsas</b></div>
-    <div class="s-field"><span>Proveedor</span><b>Cementera del Norte</b></div>
-    <p class="s-toast">Entrada guardada: de 340 a 460 bolsas</p></div></div></div></div><figcaption>Registras una entrada</figcaption></figure><figure class="cs" data-reveal style="--i:3"><div class="step-pic"><div class="win" data-ui><div class="win-bar"><strong>Inventario</strong><span>Ferretería El Pilar · Bodega central</span></div><div class="win-body"><div class="s-report"><p class="s-title">Ventas de hoy <b>C$ 55,720</b></p>
-    <ul class="s-bars"><li><span>Cemento gris 42.5 kg</span><i style="--w:100.0%"></i><b>C$ 24,960</b></li><li><span>Varilla corrugada 3/8</span><i style="--w:53.8%"></i><b>C$ 13,440</b></li><li><span>Lámina de zinc</span><i style="--w:31.3%"></i><b>C$ 7,800</b></li><li><span>Bloque de concreto 15 cm</span><i style="--w:25.6%"></i><b>C$ 6,400</b></li><li><span>Pintura de aceite blanca</span><i style="--w:12.5%"></i><b>C$ 3,120</b></li></ul>
-    <p class="s-note">Por reponer: Mortero premezclado (8 bolsas) y Tubo PVC (7 unid.)</p></div></div></div></div><figcaption>Ves el reporte del día</figcaption></figure></div>
-    <p class="small case-screens-note">Ilustración del tipo de sistema, con datos de ejemplo.</p>
+    
     <h2 id="h-vid" class="head case-vid-h" data-reveal>Video de demostración</h2>
     <div class="vid vid-pend" data-reveal><span class="pend">[PENDIENTE: video de demostración (difuminar datos sensibles)]</span></div>
   </section>
